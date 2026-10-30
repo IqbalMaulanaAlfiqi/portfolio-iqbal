@@ -1,1 +1,47 @@
-/* mencoba file */
+/* ======== VARIABEL WARNA ======== */
+:root {
+	--bg: #2C2C2C;
+	--accent: #FAF33E;
+	--text: #E7ECEF;
+	--border: #;
+	
+	--font-serif: "Libre Baskerville", serif; /* Head */
+	--font-sans: "Inter",sans-serif; /* Paragraph */
+}
+
+/* ======== RESET PENGATURAN ======== */
+* {
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+}
+
+html {
+  scroll-behavior: smooth;                 /* gulir halus saat klik link */
+  scroll-padding-top: var(--header-h);     /* agar judul tidak tertutup header */
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+	font-family: var(--font-serif); 
+	line-height: 1.2;
+}
+
+a {
+	color: inherit; 
+	text-decoration: none;
+}
+
+ul { list-style: none; }
+
+img {
+	max-width: 100%; 
+	display: block;
+}
