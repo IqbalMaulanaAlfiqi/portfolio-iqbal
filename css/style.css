@@ -1,15 +1,19 @@
 /* ======== VARIABEL WARNA ======== */
 :root {
-	--bg: #2C2C2C;
-	--accent: #FAF33E;
-	--text: #E7ECEF;
-	--border: #;
+	--bg: #141115;
+	--secondary: #191919;
+	--accent: #F4AE52;
+	--muted: rgba(241, 252, 238, 0.7);
+	--text: #F3FCF0;
+	--border: #2A2A2A;
 	
-	--font-serif: "Libre Baskerville", serif; /* Head */
-	--font-sans: "Inter",sans-serif; /* Paragraph */
+	--font-serif: "Libre Baskerville", Times New Roman, serif; /* Head */
+	--font-sans: "Inter", Arial, sans-serif; /* Paragraph */
+	
+	--header-h: 72px;
 }
 
-/* ======== RESET PENGATURAN ======== */
+/* ======== RESET & DASAR ======== */
 * {
 	margin: 0; 
 	padding: 0; 
@@ -17,18 +21,19 @@
 }
 
 html {
-  scroll-behavior: smooth;                 /* gulir halus saat klik link */
-  scroll-padding-top: var(--header-h);     /* agar judul tidak tertutup header */
+	scroll-behavior: smooth;                 /* gulir halus saat klik link */
+	scroll-padding-top: var(--header-h);     /* agar judul tidak tertutup header */
 }
 
 body {
   font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
+/* style properti */
 h1, h2, h3, h4 {
 	font-family: var(--font-serif); 
 	line-height: 1.2;
@@ -44,4 +49,80 @@ ul { list-style: none; }
 img {
 	max-width: 100%; 
 	display: block;
+}
+
+/* pengaturan ukuran teks */
+h1 { font-size: 64px; }
+h2 { font-size: 40px; }
+h3 { font-size: 28px; }
+h4 { font-size: 22px; }
+p { font-size: 18px; }
+
+.container {
+	width: min(1350px, 90%); 
+	margin-inline: auto;
+}
+.accent { color: var(--accent); }
+
+/* ======== HEADER ======== */
+.header {
+	position: fixed; top: 0; left: 0; 
+	width: 100%;
+	height: var(--header-h);
+}
+
+/* butuh JS ini */
+.header.scrolled {
+	background: rgba(11, 12, 16, 0.85);
+	backdrop-filter: blur(12px);
+	box-shadow: 0 1px 0 var(--border);
+}
+
+.nav {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-menu {
+	display: flex;
+	gap: 30px;
+}
+
+.nav-link {
+	color: var(--muted);
+	transition: 0.3s;
+}
+
+/* Tombol hamburger (hanya tampil di HP) */
+.nav-toggle {
+	display: none; 
+	background: none; 
+	border: 0; 
+	cursor: pointer;
+}
+.nav-toggle span {
+	display: block; width: 24px; height: 2px; margin: 5px 0;
+	background: var(--text); transition: 0.3s;
+}
+
+/* ======== HERO ======== */
+.hero {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	background: ;
+}
+.hero h1 { margin-bottom: 1.7rem; }
+.hero p {
+	margin-bottom: 2.5rem;
+	color: var(--muted);
+}
+
+.hero-content {
+	max-width: 700px;
+	padding-top: var(--header-h);
 }

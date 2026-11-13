@@ -6,111 +6,124 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio | Iqbal Maulana Alfiqi</title>
 	
-	<!-- link style -->
-	<link rel="stylesheet" href="css/style.css">
-	
 	<!-- link font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+	<!-- link style -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
-		<h3>Portfolio</h3>
-		<p>Iqbal Maulana Alfiqi</p>
+	<header class="header" id="header">
+		<div class="container nav">
+			<div>
+				<h3>
+					<span class="accent">Portfolio</span>
+				</h3>
+				<p>Iqbal Maulana Alfiqi</p>
+			</div>
+			
+			<!-- Tombol hamburger (hanya tampil di layar kecil) -->
+			<button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+				<span></span><span></span><span></span>
+			</button>
 		
-		<!-- Tombol hamburger (hanya tampil di layar kecil) -->
-		<button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
-			<span></span><span></span><span></span>
-		</button>
-	
-		<nav class="nav" id="nav">
-        <ul class="nav-list">
-			<li><a href="#beranda" class="nav-link">Home</a></li>
-			<li><a href="#tentang" class="nav-link">About</a></li>
-			<li><a href="#pencapaian" class="nav-link">Achievement</a></li>
-			<li><a href="#galeri" class="nav-link">Gallery</a></li>
-			<li><a href="#kontak" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+			<ul class="nav-menu">
+				<li><a href="#beranda" class="nav-link">Home</a></li>
+				<li><a href="#tentang" class="nav-link">About</a></li>
+				<li><a href="#pencapaian" class="nav-link">Achievement</a></li>
+				<li><a href="#galeri" class="nav-link">Gallery</a></li>
+				<li><a href="#kontak" class="nav-link">Contact</a></li>
+			</ul>
+		</div>
 	</header>
 	<main>
 	
 		<!-- ======== HERO ======== -->
 		
-		<section id="beranda">
-		
-			<!-- Teks Hero dan Paragraf Pembuka -->
-			<h1>Designing Ideas, Capturing Moments</h1>
-			<p>Merancang konten yang efektif untuk menjangkau audiens dan membangun kepercayaan terhadap brand.</p>
+		<section class="hero" id="beranda">
+			<div class="container hero-content">
 			
-			<!-- Section Tambahan-->
-			<a href="#tentang" class="">Lihat Profil</a>
-			<a href="#galeri" class="">Koleksi Galeri</a>
+				<!-- Teks Hero dan Paragraf Pembuka -->
+				<h1>
+					<i>
+						Designing Ideas,<br>
+						<span class="accent">Capturing Moments</span>
+					</i>
+				</h1>
+				<p>Merancang konten yang efektif untuk menjangkau audiens dan membangun kepercayaan terhadap brand.</p>
+				
+				<!-- Section Tambahan-->
+				<a href="#tentang" class="">Lihat Profil</a>
+				<a href="#galeri" class="">Koleksi Galeri</a>
+			</div>
 		</section>
 		
 		<!-- ======== TENTANG ======== -->
 		
 		<section id="tentang">
-		
-			<!-- Foto Profil -->
-			<img src="assets/images/foto-profil.webp" alt="Photo Profile" width="400">
+			<div class="">
 			
-			<!-- Paragraf Inti -->
-			<h3>Hai,</h3>
-			<h2>Iqbal Maulana Alfiqi, Salam Kenal!</h2>
-			<p>
-				Seorang pemuda yang memiliki ketertarikan dalam dunia teknologi dan industri kreatif, 
-				Juga seorang santri dari MA Ibnu Abbas As Salafy yang berlandaskan pemahaman Ahlussunnah. 
-				Di samping menjalani pendidikan, kami belajar bagaimana membuat konten yang efektif di media 
-				sosial sebagai langkah untuk mengembangkan diri menjadi kreator konten profesional. Kami juga 
-				terus mengasah keterampilan dalam berbagai software kreatif profesional.
-			</p>
-			
-			<!-- Pengalaman Selama Ini -->
-			<h2>Pengalaman & Organisasi</h2>
-			<ul>
-				<li>- Desainer dan Pengelola Website Organisasi Majalah Santri</li>
-				<li>- Koordinator Divisi IT Perpustakaan Ibnu Abbas As Salafy</li>
-				<li>- Wakil Divisi Media Organisasi Santri Pondok Pesantren Ibnu Abbas </li>
-				<li>- Peserta Kelas Desain Grafis Menggunakan CorelDRAW</li>
-				<li>- Peserta Kelas Pemrograman Website</li>
-			</ul>
-			
-			<!-- ===== Software Kreatif yang dikuasai ===== -->
-			<h2>Creative Tools</h2>
-			
-			<img src="assets/images/affinity.png">
-			<p>Affinity by Canva</p>
-			
-			<img src="assets/images/coreldraw.png">
-			<p>CorelDRAW</p>
-			
-			<img src="assets/images/adobe-lightroom.png">
-			<p>Adobe Lightroom</p>
-			
-			<img src="assets/images/snapseed.png">
-			<p>Snapseed</p>
-			
-			<img src="assets/images/davinci-resolve.png">
-			<p>DaVinci Resolve</p>
-			
-			<!-- ===== Web Development / Penguasaan Dalam Web Building ===== -->
-			<h2>Web Development</h2>
-			
-			<img src="assets/images/html.png">
-			<p>HTML</p>
-			
-			<img src="assets/images/css.png">
-			<p>CSS</p>
-			
-			<!-- ===== AI & Workflow ===== -->
-			<h2>AI & Workflow</h2>
-			
-			<img src="assets/images/chatgpt.png">
-			<img src="assets/images/claude.png">
-			<img src="assets/images/gemini.png">
-			<img src="assets/images/notebooklm.png">
+				<!-- Foto Profil -->
+				<img src="assets/images/foto-profil.webp" alt="Photo Profile" width="400">
+				
+				<!-- Paragraf Inti -->
+				<h3>Hai,</h3>
+				<h2>Iqbal Maulana Alfiqi, Salam Kenal!</h2>
+				<p>
+					Seorang pemuda yang memiliki ketertarikan dalam dunia teknologi dan industri kreatif, 
+					Juga seorang santri dari MA Ibnu Abbas As Salafy yang berlandaskan pemahaman Ahlussunnah. 
+					Di samping menjalani pendidikan, kami belajar bagaimana membuat konten yang efektif di media 
+					sosial sebagai langkah untuk mengembangkan diri menjadi kreator konten profesional. Kami juga 
+					terus mengasah keterampilan dalam berbagai software kreatif profesional.
+				</p>
+				
+				<!-- Pengalaman Selama Ini -->
+				<h2>Pengalaman & Organisasi</h2>
+				<ul>
+					<li>- Desainer dan Pengelola Website Organisasi Majalah Santri</li>
+					<li>- Koordinator Divisi IT Perpustakaan Ibnu Abbas As Salafy</li>
+					<li>- Wakil Divisi Media Organisasi Santri Pondok Pesantren Ibnu Abbas </li>
+					<li>- Peserta Kelas Desain Grafis Menggunakan CorelDRAW</li>
+					<li>- Peserta Kelas Pemrograman Website</li>
+				</ul>
+				
+				<!-- ===== Software Kreatif yang dikuasai ===== -->
+				<h2>Creative Tools</h2>
+				
+				<img src="assets/images/affinity.png">
+				<p>Affinity by Canva</p>
+				
+				<img src="assets/images/coreldraw.png">
+				<p>CorelDRAW</p>
+				
+				<img src="assets/images/adobe-lightroom.png">
+				<p>Adobe Lightroom</p>
+				
+				<img src="assets/images/snapseed.png">
+				<p>Snapseed</p>
+				
+				<img src="assets/images/davinci-resolve.png">
+				<p>DaVinci Resolve</p>
+				
+				<!-- ===== Web Development / Penguasaan Dalam Web Building ===== -->
+				<h2>Web Development</h2>
+				
+				<img src="assets/images/html.png">
+				<p>HTML</p>
+				
+				<img src="assets/images/css.png">
+				<p>CSS</p>
+				
+				<!-- ===== AI & Workflow ===== -->
+				<h2>AI & Workflow</h2>
+				
+				<img src="assets/images/chatgpt.png">
+				<img src="assets/images/claude.png">
+				<img src="assets/images/gemini.png">
+				<img src="assets/images/notebooklm.png">
+			</div>
 		</section>
 		
 		<!-- ======== PENCAPAIAN ======== -->
@@ -136,23 +149,23 @@
 		
 		<!-- ======== GALERI ======== -->
 		<section id="galeri">
-			<img src="assets/images/image_2.webp" alt="Gallery">
-			<img src="assets/images/image_4.webp" alt="Gallery">
-			<img src="assets/images/image_13.webp" alt="Gallery">
+			<img src="assets/gallery/image_2.webp" alt="Gallery">
+			<img src="assets/gallery/image_4.webp" alt="Gallery">
+			<img src="assets/gallery/image_13.webp" alt="Gallery">
 			
-			<img src="assets/images/image_1.webp" alt="Gallery">
-			<img src="assets/images/image_6.webp" alt="Gallery">
-			<img src="assets/images/image_7.webp" alt="Gallery">
+			<img src="assets/gallery/image_1.webp" alt="Gallery">
+			<img src="assets/gallery/image_6.webp" alt="Gallery">
+			<img src="assets/gallery/image_7.webp" alt="Gallery">
 			
-			<img src="assets/images/image_3.webp" alt="Gallery">
-			<img src="assets/images/image_9.webp" alt="Gallery">
-			<img src="assets/images/image_11.webp" alt="Gallery">
+			<img src="assets/gallery/image_3.webp" alt="Gallery">
+			<img src="assets/gallery/image_9.webp" alt="Gallery">
+			<img src="assets/gallery/image_11.webp" alt="Gallery">
 			
-			<img src="assets/images/image_5.webp" alt="Gallery">
-			<img src="assets/images/image_10.webp" alt="Gallery">
-			<img src="assets/images/image_12.webp" alt="Gallery">
-			<img src="assets/images/image_14.webp" alt="Gallery">
-			<img src="assets/images/image_8.webp" alt="Gallery">
+			<img src="assets/gallery/image_5.webp" alt="Gallery">
+			<img src="assets/gallery/image_10.webp" alt="Gallery">
+			<img src="assets/gallery/image_12.webp" alt="Gallery">
+			<img src="assets/gallery/image_14.webp" alt="Gallery">
+			<img src="assets/gallery/image_8.webp" alt="Gallery">
 		</Section>
 		
 		<Section id="kontak">
