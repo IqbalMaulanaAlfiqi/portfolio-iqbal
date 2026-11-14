@@ -80,6 +80,8 @@ p { font-size: 18px; }
 
 .nav {
 	height: 100%;
+
+	/* perataan objek */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -108,13 +110,19 @@ p { font-size: 18px; }
 }
 
 /* ======== HERO ======== */
+.hero-background {
+	background-image: url('images/hero.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 .hero {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	text-align: center;
 	position: relative;
-	background: ;
 }
 .hero h1 { margin-bottom: 1.7rem; }
 .hero p {
