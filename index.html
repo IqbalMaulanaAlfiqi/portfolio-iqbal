@@ -28,8 +28,9 @@
 			<button class="nav-toggle" id="navToggle" aria-label="Buka menu">
 				<span></span><span></span><span></span>
 			</button>
-		
-			<ul class="nav-menu">
+			
+			<!-- Menu navigasi -->
+			<ul class="nav-menu" id="navMenu">
 				<li><a href="#beranda" class="nav-link">Home</a></li>
 				<li><a href="#tentang" class="nav-link">About</a></li>
 				<li><a href="#pencapaian" class="nav-link">Achievement</a></li>
@@ -55,29 +56,40 @@
 				<p>Merancang konten yang efektif untuk menjangkau audiens dan membangun kepercayaan terhadap brand.</p>
 				
 				<!-- Section Tambahan-->
-				<a href="#tentang" class="">Lihat Profil</a>
-				<a href="#galeri" class="">Koleksi Galeri</a>
+				<div class="section-hero row">
+					<div class="section-profil">
+						<a href="#tentang" class="">Lihat Profil</a>
+					</div>
+					<div class="section-galeri">
+						<a href="#galeri" class="">Koleksi Galeri</a>
+					</div>
+				</div>
 			</div>
 		</section>
 		
 		<!-- ======== TENTANG ======== -->
 		
-		<section id="tentang">
-			<div class="">
+		<section class="about" id="tentang">
+			<div class="container">
 			
-				<!-- Foto Profil -->
-				<img src="assets/images/foto-profil.webp" alt="Photo Profile" width="400">
-				
-				<!-- Paragraf Inti -->
-				<h3>Hai,</h3>
-				<h2>Iqbal Maulana Alfiqi, Salam Kenal!</h2>
-				<p>
-					Seorang pemuda yang memiliki ketertarikan dalam dunia teknologi dan industri kreatif, 
-					Juga seorang santri dari MA Ibnu Abbas As Salafy yang berlandaskan pemahaman Ahlussunnah. 
-					Di samping menjalani pendidikan, kami belajar bagaimana membuat konten yang efektif di media 
-					sosial sebagai langkah untuk mengembangkan diri menjadi kreator konten profesional. Kami juga 
-					terus mengasah keterampilan dalam berbagai software kreatif profesional.
-				</p>
+				<div class="row about-border">
+					<div class="about-img">
+						<!-- Foto Profil -->
+						<img src="assets/images/photo-profile.webp" alt="Photo Profile" height="500">
+					</div>
+					<div>
+						<!-- Paragraf Inti -->
+						<h3><span class="accent">Salam Kenal!</span></h3>
+						<h2>Iqbal Maulana Alfiqi</h2>
+						<p>
+							Seorang pemuda yang memiliki ketertarikan dalam dunia teknologi dan industri kreatif, 
+							Juga seorang santri dari MA Ibnu Abbas As Salafy yang berlandaskan pemahaman Ahlussunnah. 
+							Di samping menjalani pendidikan, kami belajar bagaimana membuat konten yang efektif di media 
+							sosial sebagai langkah untuk mengembangkan diri menjadi kreator konten profesional. Kami juga 
+							terus mengasah keterampilan dalam berbagai software kreatif profesional.
+						</p>
+					</div>
+				</div>
 				
 				<!-- Pengalaman Selama Ini -->
 				<h2>Pengalaman & Organisasi</h2>
@@ -92,36 +104,50 @@
 				<!-- ===== Software Kreatif yang dikuasai ===== -->
 				<h2>Creative Tools</h2>
 				
-				<img src="assets/images/affinity.png">
-				<p>Affinity by Canva</p>
-				
-				<img src="assets/images/coreldraw.png">
-				<p>CorelDRAW</p>
-				
-				<img src="assets/images/adobe-lightroom.png">
-				<p>Adobe Lightroom</p>
-				
-				<img src="assets/images/snapseed.png">
-				<p>Snapseed</p>
-				
-				<img src="assets/images/davinci-resolve.png">
-				<p>DaVinci Resolve</p>
+				<div class="row">
+					<div>
+						<img src="assets/images/affinity.png" class="logo-images">
+						<p>Affinity by Canva</p>
+					</div>
+
+					<div>
+						<img src="assets/images/coreldraw.png" class="logo-images">
+						<p>CorelDRAW</p>
+					</div>
+
+					<div>
+						<img src="assets/images/adobe-lightroom.png" class="logo-images">
+						<p>Adobe Lightroom</p>
+					</div>
+
+					<div>
+						<img src="assets/images/snapseed.png" class="logo-images">
+						<p>Snapseed</p>
+					</div>
+
+					<img src="assets/images/davinci-resolve.png" class="logo-images">
+					<p>DaVinci Resolve</p>
+				</div>
 				
 				<!-- ===== Web Development / Penguasaan Dalam Web Building ===== -->
 				<h2>Web Development</h2>
 				
-				<img src="assets/images/html.png">
-				<p>HTML</p>
-				
-				<img src="assets/images/css.png">
-				<p>CSS</p>
-				
+				<div class="row">
+					<img src="assets/images/html.png" class="logo-images">
+					<p>HTML</p>
+					
+					<img src="assets/images/css.png" class="logo-images">
+					<p>CSS</p>
+				</div>
+
 				<!-- ===== AI & Workflow ===== -->
 				<h2>AI & Workflow</h2>
-				
-				<img src="assets/images/chatgpt.png">
-				<img src="assets/images/claude.png">
-				<img src="assets/images/gemini.png">
+
+				<div class="row">
+					<img src="assets/images/chatgpt.png" class="ai-images">
+					<img src="assets/images/claude.png" class="ai-images">
+					<img src="assets/images/gemini.png" class="ai-images">
+				</div>
 			</div>
 		</section>
 		
@@ -174,5 +200,6 @@
 	<footer>
 	
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>

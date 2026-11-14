@@ -2,12 +2,15 @@
 :root {
 	--bg: #141115;
 	--secondary: #191919;
+	--surface: #14161c;
+	--surface-2: #1b1e26;
 	--accent: #F4AE52;
-	--muted: rgba(241, 252, 238, 0.7);
+	--accent-muted: rgba(255, 167, 51);
+	--text-muted: rgba(241, 252, 238, 0.8);
 	--text: #F3FCF0;
 	--border: #2A2A2A;
 	
-	--font-serif: "Libre Baskerville", Times New Roman, serif; /* Head */
+	--font-serif: "Libre Baskerville", serif; /* Head */
 	--font-sans: "Inter", Arial, sans-serif; /* Paragraph */
 	
 	--header-h: 72px;
@@ -47,8 +50,28 @@ a {
 ul { list-style: none; }
 
 img {
-	max-width: 100%; 
+	max-height: 100%; 
 	display: block;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo-images {
+	max-height: 60px;
+}
+
+.ai-images {
+	max-height: 50px;
 }
 
 /* pengaturan ukuran teks */
@@ -64,18 +87,21 @@ p { font-size: 18px; }
 }
 .accent { color: var(--accent); }
 
-/* ======== HEADER ======== */
+/* =========== HEADER =========== */
 .header {
 	position: fixed; top: 0; left: 0; 
 	width: 100%;
 	height: var(--header-h);
+	z-index: 100;
+	transition: background 0.4s, box-shadow 0.4s;
 }
 
 /* butuh JS ini */
+/* Kelas ini ditambahkan JS saat halaman digulir */
 .header.scrolled {
-	background: rgba(11, 12, 16, 0.85);
-	backdrop-filter: blur(12px);
-	box-shadow: 0 1px 0 var(--border);
+  background: rgba(11, 12, 16, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border);
 }
 
 .nav {
@@ -93,9 +119,23 @@ p { font-size: 18px; }
 }
 
 .nav-link {
-	color: var(--muted);
+	position: relative;
+	font-size: 0.95rem;
+	color: var(--text-muted);
 	transition: 0.3s;
 }
+
+/* Garis bawah animasi pada menu */
+.nav-link::after {
+  content: ""; position: absolute; left: 0; bottom: -6px;
+  width: 0; height: 2px; background: var(--accent);
+  transition: width 0.3s;
+}
+.nav-link:hover, 
+.nav-link.active { color: var(--text); }
+
+.nav-link:hover::after, 
+.nav-link.active::after { width: 100%; }
 
 /* Tombol hamburger (hanya tampil di HP) */
 .nav-toggle {
@@ -109,7 +149,7 @@ p { font-size: 18px; }
 	background: var(--text); transition: 0.3s;
 }
 
-/* ======== HERO ======== */
+/* =========== HERO =========== */
 .hero-background {
 	background-image: url('images/hero.webp');
 	background-size: cover;
@@ -125,12 +165,71 @@ p { font-size: 18px; }
 	position: relative;
 }
 .hero h1 { margin-bottom: 1.7rem; }
+
 .hero p {
 	margin-bottom: 2.5rem;
-	color: var(--muted);
+	color: var(--text-muted);
 }
 
 .hero-content {
 	max-width: 700px;
 	padding-top: var(--header-h);
+}
+
+.section-hero {
+	display: flex;
+	gap: 1.5rem;
+}
+
+/* =========== ABOUT =========== */
+.about { padding: 7rem 0; }
+
+.about-border {
+	display: grid; 
+	grid-template-columns: 0.5fr 1fr; 
+	gap: 3rem;
+	align-items: center;
+}
+
+.about-border p {
+	margin-top: 2rem;
+}
+
+/* foto kamu di sini */
+.about-img {
+	border-radius: 16px; 
+	overflow: hidden; 
+	aspect-ratio: 4 / 5; 
+	background: var(--surface-2);
+}
+
+.about-img img {
+	width: 100%; 
+	height: 100%;
+	object-fit: cover; 
+	transition: transform 0.6s;
+}
+
+.about-img img:hover { transform: scale(1.05); }  /* zoom halus saat hover */
+
+.section-profil {
+	padding: 7px 20px;
+	border-radius: 18px;
+	background-color: var(--accent);
+	color: var(--secondary);
+}
+
+.section-profil:hover {
+	background-color: var(--accent-muted);
+}
+
+.section-galeri {
+	padding: 7px 20px;
+	border: 1px solid var(--text);
+	border-radius: 18px;
+}
+
+.section-galeri:hover {
+	color: var(--text-muted);
+	border: 1px solid var(--text-muted);
 }
