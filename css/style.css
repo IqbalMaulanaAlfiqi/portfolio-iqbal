@@ -4,8 +4,8 @@
 	--secondary: #191919;
 	--surface: #14161c;
 	--surface-2: #1b1e26;
-	--accent: #F4AE52;
-	--accent-muted: rgba(255, 167, 51);
+	--accent: #FFA733;
+	--accent-muted: #FFB452;
 	--text-muted: rgba(241, 252, 238, 0.8);
 	--text: #F3FCF0;
 	--border: #2A2A2A;
@@ -66,14 +66,6 @@ img {
 	align-items: center;
 }
 
-.logo-images {
-	max-height: 60px;
-}
-
-.ai-images {
-	max-height: 50px;
-}
-
 /* pengaturan ukuran teks */
 h1 { font-size: 64px; }
 h2 { font-size: 40px; }
@@ -96,8 +88,10 @@ p { font-size: 18px; }
 	transition: background 0.4s, box-shadow 0.4s;
 }
 
-/* butuh JS ini */
-/* Kelas ini ditambahkan JS saat halaman digulir */
+/* 
+butuh javascript ini,
+Kelas ini ditambahkan JS saat halaman digulir 
+*/
 .header.scrolled {
   background: rgba(11, 12, 16, 0.85);
   backdrop-filter: blur(12px);
@@ -176,19 +170,54 @@ p { font-size: 18px; }
 	padding-top: var(--header-h);
 }
 
-.section-hero {
+/* Tombol pada hero*/
+.hero-buttons {
 	display: flex;
-	gap: 1.5rem;
+	gap: 1rem;
+}
+
+.btn {
+  padding: 0.85rem 2rem; border-radius: 999px;
+  font-weight: 500; font-size: 0.95rem;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
+}
+
+.btn-profile {
+	padding: 7px 20px;
+	border-radius: 18px;
+	background-color: var(--accent);
+	color: var(--secondary);
+}
+
+.btn-gallery {
+	padding: 7px 20px;
+	color: var(--text-muted);
+	border: 1px solid var(--text-muted);
+	border-radius: 18px;
+}
+
+/* hover, ketika curcor di atas button */
+.btn:hover { transform: translateY(-3px); }
+
+.btn-profile:hover {
+	background-color: var(--accent-muted);
+	box-shadow: 0 5px 15px rgba(255, 180, 82, 0.35);
+}
+
+.btn-gallery:hover {
+	color: var(--accent);
+	border: 1px solid var(--accent);
 }
 
 /* =========== ABOUT =========== */
-.about { padding: 7rem 0; }
+.about { padding: 4rem 0; }
 
 .about-border {
 	display: grid; 
 	grid-template-columns: 0.5fr 1fr; 
 	gap: 3rem;
 	align-items: center;
+	padding: 0 20px;
 }
 
 .about-border p {
@@ -212,24 +241,75 @@ p { font-size: 18px; }
 
 .about-img img:hover { transform: scale(1.05); }  /* zoom halus saat hover */
 
-.section-profil {
-	padding: 7px 20px;
-	border-radius: 18px;
-	background-color: var(--accent);
-	color: var(--secondary);
+/* Judul blok (Pengalaman, Keahlian) */
+.block, .skills { margin-top: 3rem; }
+.block-title {
+	font-size: 1.8rem; 
+	margin-bottom: 2rem;
 }
 
-.section-profil:hover {
-	background-color: var(--accent-muted);
+.skills h4 {
+	margin: 1rem 0;
+	text-align: center;
 }
 
-.section-galeri {
-	padding: 7px 20px;
-	border: 1px solid var(--text);
-	border-radius: 18px;
+/* Garis aksen di bawah judul: hapus blok ini untuk menghilangkan underline */
+.block-title::after {
+	content: ""; /* ukuran underline */
+	display: block;
+	width: 100px; 
+	height: 3px;
+	background: var(--accent); /* warna dari underline */
+	margin-top: 0.5rem; 
+	border-radius: 2px;
 }
 
-.section-galeri:hover {
-	color: var(--text-muted);
-	border: 1px solid var(--text-muted);
+/* Daftar pengalaman */
+.exp-list {
+	display: grid; 
+	gap: 0.5rem;
+	padding: 1rem 1.4rem; background: var(--surface); /* background card */
+	border: 1px solid var(--border); 
+	border-radius: 12px;
+	transition: transform 0.3s, background 0.3s;
+}
+
+.exp-list:hover {
+	transform: translateX(8px); 
+	background: var(--surface-2);
+}
+
+.soft-card {
+	padding: 1rem 1.4rem; background: var(--surface); /* background card */
+	border: 1px solid var(--border); 
+	border-radius: 12px;
+	transition: transform 0.3s, background 0.3s;
+	gap: 30px;
+}
+
+.soft-border {
+	width: 100%;
+	max-width: 90px;
+	text-align: center;
+}
+
+.logo-images {
+	max-height: 60px;
+}
+
+.ai-images {
+	max-height: 40px;
+}
+
+
+/* ========== ANIMASI SAAT DIGULIR ========== */
+/* Kondisi awal: transparan & turun sedikit */
+.reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+/* Kelas ini ditambahkan JS ketika elemen terlihat */
+.reveal.show {
+	opacity: 1;
+	transform: none;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-<html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,22 +46,15 @@
 			<div class="container hero-content">
 			
 				<!-- Teks Hero dan Paragraf Pembuka -->
-				<h1>
-					<i>
-						Designing Ideas,<br>
-						<span class="accent">Capturing Moments</span>
-					</i>
+				<h1 class="reveal">
+					<i>Designing Ideas,<br><span class="accent">Capturing Moments</span></i>
 				</h1>
-				<p>Merancang konten yang efektif untuk menjangkau audiens dan membangun kepercayaan terhadap brand.</p>
+				<p class="reveal">Merancang konten yang efektif untuk menjangkau audiens dan membangun kepercayaan terhadap brand.</p>
 				
 				<!-- Section Tambahan-->
-				<div class="section-hero row">
-					<div class="section-profil">
-						<a href="#tentang" class="">Lihat Profil</a>
-					</div>
-					<div class="section-galeri">
-						<a href="#galeri" class="">Koleksi Galeri</a>
-					</div>
+				<div class="row hero-buttons reveal">
+					<a href="#tentang" class="btn btn-profile">Lihat Profil</a>
+					<a href="#galeri" class="btn btn-gallery">Koleksi Galeri</a>
 				</div>
 			</div>
 		</section>
@@ -72,10 +64,10 @@
 		<section class="about" id="tentang">
 			<div class="container">
 			
-				<div class="row about-border">
+				<div class="row about-border reveal">
 					<div class="about-img">
 						<!-- Foto Profil -->
-						<img src="assets/images/photo-profile.webp" alt="Photo Profile" height="500">
+						<img src="assets/images/photo-profile.webp" alt="Photo Profile">
 					</div>
 					<div>
 						<!-- Paragraf Inti -->
@@ -92,61 +84,61 @@
 				</div>
 				
 				<!-- Pengalaman Selama Ini -->
-				<h2>Pengalaman & Organisasi</h2>
-				<ul>
-					<li>- Desainer dan Pengelola Website Organisasi Majalah Santri</li>
-					<li>- Koordinator Divisi IT Perpustakaan Ibnu Abbas As Salafy</li>
-					<li>- Wakil Divisi Media Organisasi Santri Pondok Pesantren Ibnu Abbas </li>
-					<li>- Peserta Kelas Desain Grafis Menggunakan CorelDRAW</li>
-					<li>- Peserta Kelas Pemrograman Website</li>
-				</ul>
+				<div class="block reveal">
+					<h3 class="block-title reveal">Pengalaman & Organisasi</h3>
+					<ul class="exp-list" data-stagger>
+						<li>- Desainer dan Pengelola Website Organisasi Majalah Santri</li>
+						<li>- Koordinator Divisi IT Perpustakaan Ibnu Abbas As Salafy</li>
+						<li>- Wakil Divisi Media Organisasi Santri Pondok Pesantren Ibnu Abbas </li>
+						<li>- Peserta Kelas Desain Grafis Menggunakan CorelDRAW</li>
+						<li>- Peserta Kelas Pemrograman Website</li>
+					</ul>
+				</div>
 				
 				<!-- ===== Software Kreatif yang dikuasai ===== -->
-				<h2>Creative Tools</h2>
-				
-				<div class="row">
-					<div>
-						<img src="assets/images/affinity.png" class="logo-images">
-						<p>Affinity by Canva</p>
+				<div class="skills reveal">
+					<h3 class="block-title reveal">What I Use?</h3>	
+					<h4 class="block">Creative Tools</h4>		
+					<div class="row soft-card">						
+						<div class="soft-border column">
+							<img src="assets/images/affinity.png" class="logo-images">
+							<p>Affinity <br>by Canva</p>
+						</div>
+						<div class="soft-border column">
+							<img src="assets/images/coreldraw.png" class="logo-images">
+							<p>CorelDRAW</p>
+						</div>
+						<div class="soft-border column">
+							<img src="assets/images/adobe-lightroom.png" class="logo-images">
+							<p>Adobe Lightroom</p>
+						</div>
+						<div class="soft-border column">
+							<img src="assets/images/snapseed.png" class="logo-images">
+							<p>Snapseed</p>
+						</div>
+						<div class="soft-border column">
+							<img src="assets/images/davinci-resolve.png" class="logo-images">
+							<p>DaVinci Resolve</p>
+						</div>
 					</div>
-
-					<div>
-						<img src="assets/images/coreldraw.png" class="logo-images">
-						<p>CorelDRAW</p>
-					</div>
-
-					<div>
-						<img src="assets/images/adobe-lightroom.png" class="logo-images">
-						<p>Adobe Lightroom</p>
-					</div>
-
-					<div>
-						<img src="assets/images/snapseed.png" class="logo-images">
-						<p>Snapseed</p>
-					</div>
-
-					<img src="assets/images/davinci-resolve.png" class="logo-images">
-					<p>DaVinci Resolve</p>
-				</div>
-				
-				<!-- ===== Web Development / Penguasaan Dalam Web Building ===== -->
-				<h2>Web Development</h2>
-				
-				<div class="row">
-					<img src="assets/images/html.png" class="logo-images">
-					<p>HTML</p>
 					
-					<img src="assets/images/css.png" class="logo-images">
-					<p>CSS</p>
-				</div>
+					<!-- ===== Web Development / Penguasaan Dalam Web Building ===== -->
+					<h4 class="block">Web Development</h4>
+					<div class="row">
+						<img src="assets/images/html.png" class="logo-images">
+						<p>HTML</p>
+						
+						<img src="assets/images/css.png" class="logo-images">
+						<p>CSS</p>
+					</div>
 
-				<!-- ===== AI & Workflow ===== -->
-				<h2>AI & Workflow</h2>
-
-				<div class="row">
-					<img src="assets/images/chatgpt.png" class="ai-images">
-					<img src="assets/images/claude.png" class="ai-images">
-					<img src="assets/images/gemini.png" class="ai-images">
+					<!-- ===== AI & Workflow ===== -->
+					<h4 class="block">AI & Workflow</h4>
+					<div class="row">
+						<img src="assets/images/chatgpt.png" class="ai-images">
+						<img src="assets/images/claude.png" class="ai-images">
+						<img src="assets/images/gemini.png" class="ai-images">
+					</div>
 				</div>
 			</div>
 		</section>
