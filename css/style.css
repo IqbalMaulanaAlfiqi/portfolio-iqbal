@@ -6,7 +6,7 @@
 	--surface-2: #1b1e26;
 	--accent: #FFA733;
 	--accent-muted: #FFB452;
-	--text-muted: rgba(241, 252, 238, 0.8);
+	--text-muted: rgba(241, 252, 238, 0.7);
 	--text: #F3FCF0;
 	--border: #2A2A2A;
 	
@@ -243,14 +243,21 @@ Kelas ini ditambahkan JS saat halaman digulir
 
 /* Judul blok (Pengalaman, Keahlian) */
 .block, .skills { margin-top: 3rem; }
+
+.sub-line {
+	margin: 0 0 1rem 0;
+	text-align: center;
+}
+
+.mini {
+	font-size: 14px;
+	letter-spacing: 3px;
+	word-spacing: 3px;
+}
+
 .block-title {
 	font-size: 1.8rem; 
 	margin-bottom: 2rem;
-}
-
-.skills h4 {
-	margin: 1rem 0;
-	text-align: center;
 }
 
 /* Garis aksen di bawah judul: hapus blok ini untuk menghilangkan underline */
@@ -279,12 +286,18 @@ Kelas ini ditambahkan JS saat halaman digulir
 	background: var(--surface-2);
 }
 
+/* Daftar software */
 .soft-card {
-	padding: 1rem 1.4rem; background: var(--surface); /* background card */
+	padding: 1rem 1.4rem; 
+	background: var(--surface); /* background card */
 	border: 1px solid var(--border); 
 	border-radius: 12px;
 	transition: transform 0.3s, background 0.3s;
-	gap: 30px;
+	gap: 40px;
+}
+
+.soft-card:hover {
+	background: var(--surface-2);
 }
 
 .soft-border {
@@ -293,14 +306,47 @@ Kelas ini ditambahkan JS saat halaman digulir
 	text-align: center;
 }
 
-.logo-images {
-	max-height: 60px;
+.soft-img {
+	display: flex;
+	gap: 40px;
 }
 
-.ai-images {
-	max-height: 40px;
+.soft-img img { width: 64px; }
+
+.soft-img p {
+	margin: 15px 0 0 0;
+	font-size: 16px;
+	line-height: 98%;
 }
 
+.ai-bg {
+	padding: 1rem 0;
+	background: var(--surface);
+	border-top: 1px solid var(--border); 
+	border-bottom: 1px solid var(--border);	
+}
+
+.ai-bg p {
+	margin-bottom: 1rem;
+}
+
+.ai-bg:hover {
+	background: var(--surface-2);
+	transition: transform 0.3s, background 0.3s;
+}
+
+.ai-img {
+	display: flex;
+	gap: 50px;
+}
+
+.ai-img img { height: 40px; }
+
+/* Setting bagian */
+.code-border {
+	display: grid; 
+	grid-template-columns: 0.5fr 1fr; 
+}
 
 /* ========== ANIMASI SAAT DIGULIR ========== */
 /* Kondisi awal: transparan & turun sedikit */
