@@ -277,6 +277,7 @@ Kelas ini ditambahkan JS saat halaman digulir
 	gap: 0.5rem;
 	padding: 1rem 1.4rem; background: var(--surface); /* background card */
 	border: 1px solid var(--border); 
+	border-left: 5px solid var(--accent);
 	border-radius: 12px;
 	transition: transform 0.3s, background 0.3s;
 }
@@ -286,18 +287,18 @@ Kelas ini ditambahkan JS saat halaman digulir
 	background: var(--surface-2);
 }
 
-/* Daftar software */
+/* Setting bagian Software */
 .soft-card {
 	padding: 1rem 1.4rem; 
 	background: var(--surface); /* background card */
 	border: 1px solid var(--border); 
 	border-radius: 12px;
-	transition: transform 0.3s, background 0.3s;
 	gap: 40px;
 }
 
 .soft-card:hover {
 	background: var(--surface-2);
+	transition: transform 0.3s, background 0.3s;
 }
 
 .soft-border {
@@ -319,6 +320,60 @@ Kelas ini ditambahkan JS saat halaman digulir
 	line-height: 98%;
 }
 
+
+/* Setting bagian Code*/
+.lang-card {
+	padding: 20px;
+	border-radius: 12px;
+	background-color: var(--surface);
+	border: 1px solid var(--border);
+	gap: 50px;
+}
+
+.lang-card:hover {
+	background-color: var(--surface-2);
+	transition: transform 0.3s, background 0.3s;
+}
+
+.lang-text img {
+	height: 170px;
+}
+
+.lang-text h3 {
+	margin-top: 2rem;
+	font-family: var(--font-sans);
+}
+
+.lang-card hr {
+	border-top: 1px solid var(--border);
+	width: 100%;
+	opacity: 0.6;
+}
+
+.code-border {
+	display: grid; 
+	grid-template-columns: 0.5fr 0.7fr; 
+	gap: 2rem;
+	align-items: center;
+}
+
+.terminal {
+	border-radius: 15px;
+	overflow: hidden; 
+	aspect-ratio: 4 / 5; 
+	background: var(--surface-2);
+}
+
+.terminal img {
+	width: 100%; 
+	height: 100%;
+	object-fit: cover; 
+	transition: transform 0.6s;
+}
+
+.terminal img:hover { transform: scale(1.05); }  /* zoom halus saat hover */
+
+/* Setting bagian AI & workflow */
 .ai-bg {
 	padding: 1rem 0;
 	background: var(--surface);
@@ -341,12 +396,6 @@ Kelas ini ditambahkan JS saat halaman digulir
 }
 
 .ai-img img { height: 40px; }
-
-/* Setting bagian */
-.code-border {
-	display: grid; 
-	grid-template-columns: 0.5fr 1fr; 
-}
 
 /* ========== ANIMASI SAAT DIGULIR ========== */
 /* Kondisi awal: transparan & turun sedikit */
